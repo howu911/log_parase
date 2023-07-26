@@ -1,0 +1,38 @@
+{% extends 'home_base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h1 class="text-center" style="margin-top:70px">环境登录</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <form>
+                <div class="form-group">
+                    <label for="env_ip">环境ip：</label>
+                    <input type="text" class="form-control" id="env_ip" placeholder="环境ip">
+                </div>
+                <div class="form-group">
+                    <label for="env_username">用户名：</label>
+                    <input type="text" class="form-control" id="env_username" placeholder="不填，默认使用itran">
+                </div>
+                <div class="form-group">
+                    <label for="env_port">端口：</label>
+                    <input type="text" class="form-control" id="env_port" placeholder="不填，默认使用22端口">
+                </div>
+                <div class="form-group">
+                    <label for="env_password">密码</label>
+                    <input type="password" class="form-control" id="env_password" placeholder="不填，默认使用itran用户密码">
+                </div>
+                
+                <div class="clearfix"></div>
+                <button type="submit" class="btn btn-danger col-sm-6 col-sm-offset-3" style="margin-top:10px;">登录</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

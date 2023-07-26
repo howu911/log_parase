@@ -1,0 +1,32 @@
+{% extends 'home_base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar custom-sidebar">
+            <ul class="nav nav-sidebar">
+                {% for item in menu %}
+                    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+                {% endfor %}
+                <!--
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#submenu1">菜单项3 <span class="caret"></span></a>
+                    <ul id="submenu1" class="collapse">
+                        <li><a href="#">子菜单项1</a></li>
+                        <li><a href="#">子菜单项2</a></li>
+                        <li><a href="#">子菜单项3</a></li>
+                    </ul>
+                </li>
+                -->
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1>欢迎来到我的网站</h1>
+            <pre><code class="language-shell line-numbers">
+                {{ log_txt }}
+            </code></pre>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
